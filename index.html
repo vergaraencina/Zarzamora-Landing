@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarzamora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.jpg" alt="Taller Zarzamora Logo">
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#"><img src="search-icon.png" alt="Buscar"></a>
+                <a href="#"><img src="user-icon.png" alt="Usuario"></a>
+                <a href="#"><img src="cart-icon.png" alt="Carrito"></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrusel -->
+    <section class="carousel">
+        <div class="slide">
+            <img src="assets/img/Carrusel 1.jpg" alt="Cerámicas">
+            <div class="carousel-text">
+                <h2>Cerámicas, Arte, Diseños Mágicos</h2>
+                <p>Zarzamora es una tienda online, un taller de cerámica, un estudio y un espacio creativo ubicado en Valparaíso, Chile.</p>
+                <a href="#" class="button">Ver más</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/img/Carrusl 2.jpg" alt="Diseños Mágicos">
+            <div class="carousel-text">
+                <h2>Cerámicas, Arte, Diseños Mágicos</h2>
+                <p>Un espacio creativo lleno de arte y magia para tu hogar.</p>
+                <a href="#" class="button">Ver más</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/img/Crrusel 3.jpg" alt="Taller Zarzamora">
+            <div class="carousel-text">
+                <h2>Cerámicas, Arte, Diseños Mágicos</h2>
+                <p>Cada pieza es única y hecha a mano con dedicación.</p>
+                <a href="#" class="button">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Zarzamorita -->
+    <section class="Mundo-zarzamora">
+        <img src="assets/img/Morita.png" alt="Morita">
+        <h2>Mundo Zarzamorita</h2>
+        <p>Todas nuestras piezas tienen una historia mágica <br> lista para ser descubierta.</p>
+    </section>
+
+    <!-- Imágenes con hover -->
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="assets/img/Servicio 1.jpg" alt="Pieza 1">
+            <div class="hover-text">PEDIDOS PERSONALIZADOS</div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/img/Servicio 2.jpg" alt="Pieza 2">
+            <div class="hover-text">TALLERES</div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/img/servicio 3.jpg" alt="Pieza 3">
+            <div class="hover-text">ARRIENDO DE HORNOS</div>
+        </div>
+    </section>
+
+    <section class="about">
+        <img src="assets/img/Abuela.png" alt="Abuela">
+        <h2>Somos 2 hermanas creando magia</h2>
+        <p>Fundadoras del Taller de cerámica Zarzamora, un negocio local lleno de amor y creatividad, Francisca y Gabriela.</p>
+        <a href="#" class="button">Conócenos</a>
+    </section>
+
+    <footer>
+        <p>Negocio local propiedad de hermanas</p>
+        <div class="social-icons">
+            <a href="#"><img src="tiktok-icon.png" alt="TikTok"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <ul>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Envío</a></li>
+            <li><a href="#">Política de Cambios</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel .slide');
+        const totalSlides = slides.length;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000); // Cambia de slide cada 5 segundos
+    
+        // Inicializa el primer slide visible
+        showSlide(currentSlide);
+    </script>
+    
+
+</body>
+</html>
